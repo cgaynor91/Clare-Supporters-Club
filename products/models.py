@@ -1,5 +1,5 @@
 from django.db import models
-from accounts.models import User
+
 from django.utils import timezone
 from django.core.validators import MaxValueValidator, MinValueValidator
 
@@ -16,7 +16,7 @@ class Product(models.Model):
 
 class Productreview(models.Model):
     product = models.ForeignKey('products.Product', on_delete=models.CASCADE, related_name='productreviews')
-    reviewer = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+
     review = models.TextField()
     rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
     created_date = models.DateTimeField(default=timezone.now)
