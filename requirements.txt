@@ -1,15 +1,11 @@
-
 boto3==1.10.41
 botocore==1.13.41
 chardet==3.0.4
 colorama==0.4.3
-
 dj-database-url==0.5.0
 Django==1.11
 django-forms-bootstrap==3.1.0
-
 docutils==0.15.2
-
 jmespath==0.9.4
 Pillow==7.0.0
 psycopg2==2.8.4
@@ -30,4 +26,3 @@ websocket-client==0.56.0
 Werkzeug==0.16.0
 whichcraft==0.6.1
 wrapt==1.12.1
-zipp==0.6.0
