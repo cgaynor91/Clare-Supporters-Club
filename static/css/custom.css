@@ -2,7 +2,12 @@
  
 body {
     font-family: Arial;
-    padding-top: 100px;
+    padding-top: 80px;
+    background-image: url("/static/images/bg.JPG"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  /*   background-image: url({% static 'images/bg.JPG' %}); background-position: no-repeat center center fixed;*/
 }
 
 
@@ -23,6 +28,7 @@ input, button, select, textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: 2;
+    float:left;
 }
 
 
