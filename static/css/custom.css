@@ -2,12 +2,11 @@
  
 body {
     font-family: Arial;
-    padding-top: 80px;
+    padding-top: 90px;
     background-image: url("/static/images/bg.JPG"); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  /*   background-image: url({% static 'images/bg.JPG' %}); background-position: no-repeat center center fixed;*/
 }
 
 
@@ -19,6 +18,10 @@ footer {
     color: #A9A9A9;
 }
 
+h1 {
+    display: block;
+    font-size: 4.5em;
+}
 
 .icon-bar {
     background-color: yellow;
@@ -54,6 +57,8 @@ input, button, select, textarea {
 }
 
 
+
+
 .accountform {
     padding-top: 20px;
 }
@@ -70,6 +75,7 @@ input, button, select, textarea {
 .badge-warning[href] {
     background-color: #c67605;
 }
+/* Styling for products */
 
 .product {
     background-size: contain;
@@ -82,6 +88,11 @@ input, button, select, textarea {
 
 caption p {
     word-wrap: break-word;
+}
+
+.main {
+    background: #f4c430;
+    opacity: 0.6;
 }
 
 .row.row-flex {
