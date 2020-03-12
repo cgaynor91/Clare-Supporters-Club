@@ -1,101 +1,27 @@
-{% extends 'base.html' %} 
-{% block page_title %}Merchandise{% endblock %}
+{% extends 'base.html' %}
+
 {% block content %}
-<section class="page-container">
-    <div class="row">
-        <div class="col-12">
-            <div class="row">
-                <div class="col-12 offset-md-1 col-md-10">
-                    <h1 class="orange-text">Merchandise</h1>
-                    <br>
-                    <p>
-                        Clare GAA <br> Clare GAA official online store features the Nevis training range, accessories and kids clothing. Personalise the latest Clare GAA jersey with a name, number or player fit only at oneills.com. The Clare GAA Nevis
-                        range features lightweight half zips, stretchable skinnies & fashionable tops. Fast Delivery!
-                    </p>
-                    <hr>
-                    <div class="row">
-                        <div id="search" class="offset-1 col-10 offset-md-2 col-md-8 mx-auto">
-                            <form action="{% url '#' %}" method="GET">
-                                <div class="form-group">
-                                    <p>
-                                        <label for="" class="yellow-text">Search</label>
-                                        <input id="products-search" type="text" name="query" class="form-control" placeholder="e.g. Jersey">
-                                    </p>
-                                    <p>
-                                        <button class="btn btn-custom sm-btn-sizing ml-1" type="submit">Search</button>
-                                        <a class="btn btn-custom sm-btn-sizing ml-1" href="{% url 'all_products' %}">Cancel</a>
-                                    </p>
-                                </div>
-                            </form>
-                        </div> 
-                    </div> 
-                    <hr>
-                    <br>
-                    <div class="row">
-                        {% for product in products %}
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card mb-3 border-dark" style="background-color: #3498DB;">
-                                <img src="{{ MEDIA_URL }}{{ product.image }}" class="card-img-top" alt="Image of {{ product.name }}" />
-                                <div class="card-body">
-                                    <h5 class="product-card-title"><a class="text-links" href="{% url 'product_details' pk=product.pk %}">{{ product.name }}</a></h5>
-                                    <p class="card-text">€{{ product.price }}</p>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <form method="POST" action="{% url 'add_to_cart' product.id %}">
-                                                {% csrf_token %}
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <label class="small">Quantity:</label>
-                                                        <input name="quantity" type="number" min="1" max="999" value="1" class="form-control product-btn-sizing mx-auto text-center">
-                                                        <button class="btn btn-custom product-btn-sizing" type="submit">Add</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-{% endfor %}
+<div class="row row-flex">
+    {% for product in products %}
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+            <div class="panel-body">
+                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+
+                <h3>{{ product.name }}</h3>
+                <p class="product-description">{{ product.description }}</p>
+                <p>{{ product.price }}</p>
+
+                <form method="post" action="{% url 'add_to_cart' product.id %}">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Add</button>
+                        </span>
                     </div>
-                    <br>
-            <div class="row">
-                <div class="mx-auto">
-                     {% if products.has_other_pages %}
-                            <ul class="pagination">
-                                {% if products.has_previous %}
-                                <li class="page-item">
-                                    <a href="?page={{products.previous_page_number}}" class="page-link"><i class="fas fa-angle-double-left"></i></a>
-                                </li>
-                                {% else %}
-                                <li class="page-item disabled">
-                                    <a class="page-link"><i class="fas fa-angle-double-left"></i></a>
-                                </li>
-                                {% endif %} {% for i in products.paginator.page_range %} {% if products.number == i %}
-                                <li class="page-item active">
-                                    <a class="page-link">{{i}}</a>
-                                </li>
-                                {% else %}
-                                <li class="page-item">
-                                    <a href="?page={{i}}" class="page-link">{{i}}</a>
-                                </li>
-                                {% endif %} {% endfor %} {% if products.has_next %}
-                                <li class="page-item">
-                                    <a href="?page={{products.next_page_number}}" class="page-link"><i class="fas fa-angle-double-right"></i></a>
-                                </li>
-                                {% else %}
-                                <li class="page-item disabled">
-                                    <a class="page-link"><i class="fas fa-angle-double-right"></i></a>
-                                </li>
-                                {% endif %}
-                            </ul>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
-    </div>
-</section>
-
+    {% endfor %}
+</div>
 {% endblock %}
