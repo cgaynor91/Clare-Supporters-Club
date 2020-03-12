@@ -1,22 +1,23 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Clare Supporter's Club</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    {% block head_js %}
-    {% endblock head_js %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css”/>">
+
 </head>
+
 <body>
     <!-- Fixed masthead -->
-  <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -30,11 +31,11 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i>Profile</a></li>
-                        <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
-                    {%  else %}
-                        <li><a href="{% url 'register' %}">?<i class="fas fa-user-plus"></i>Register</a></li>
-                        <li><a href="{% url 'login' %}"><i class="fas fa-sign-in"></i>Log In</a></li>
+                    <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i>Profile</a></li>
+                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out-alt"></i>Log Out</a></li>
+                    {% else %}
+                    <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i>Register</a></li>
+                    <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i>Log In</a></li>
                     {% endif %}
                     <li>
                         <a href="{% url 'view_cart' %}">
@@ -49,27 +50,33 @@
         </div>
     </nav>
     {% if messages %}
-        <div class="alert alert-success">
-            <div class="messages">
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
-            </div>
+    <div class="alert alert-success">
+        <div class="messages">
+            {% for message in messages %} {{ message }} {% endfor %}
         </div>
+    </div>
     {% endif %}
-    <div class="container">
+    <div class="container" style="background-image: url({% static 'images/bg.JPG' %}); background-position: center;">
         <div class="display">
             <form action="{% url 'search' %}" method="get">
                 <input type="text" name="q">
                 <button type="search">Search</button>
             </form>
         </div>
-        {% block content %} {% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
     <footer>
         <div class="container">
-            <p>Made by Code Institute bootcampers</p>
+            <p>&copy; Claire Gaynor</p>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/6e8a87078f.js"></script>
+    {% block head_js %} {% endblock head_js %}
+    <script src="{% static 'js/main.js' %}"></script>
+
 </body>
+
 </html>
