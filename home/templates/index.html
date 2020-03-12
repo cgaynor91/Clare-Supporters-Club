@@ -2,4 +2,32 @@
 
 {% block content %}
 
+    <section class="page-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 offset-md-1 col-md-10">
+                        <h1 class="yellow-text">Clare Supporter's Club</h1>
+                        <h3>A club for likeminded individuals who support The Banner County</h3>
+                        <br>
+                        {% if user.is_authenticated %}
+                            <h5>Welcome back <span class="orange-text">{{ request.user.username }}</span>!</h5>
+                        {% else %}
+                            <h5>Welcome!</h5>
+                        {% endif %}
+                        <p>
+                            Here at Clare Supporter's Club we offer an online community of likeminded supporters to become a part of one club. 
+                            <br>
+                            Clare hurling supporters fundraising to support Clare hurling from development squads to senior, giving fans the opportunity to give back to their county.
+                            <br>
+                            Here at Clare Supporter's Club we offer Clare GAA gear at discounted rates for members of the club, all profits going back to the county. 
+                            <br>
+                            <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 {% endblock %}

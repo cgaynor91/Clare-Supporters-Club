@@ -1,8 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <section class="page-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row text-center">
+                    <div class="col-12 offset-md-1 col-md-10">
+                        <h1 class="yellow-text">Clare Supporter's Club</h1>
+                        <h3>A club for likeminded individuals who support The Banner County</h3>
+                        <br>
+                        {% if user.is_authenticated %}
+                            <h5>Welcome back <span class="orange-text">{{ request.user.username }}</span>!</h5>
+                        {% else %}
+                            <h5>Welcome!</h5>
+                        {% endif %}
+                        <p>
+                            Here at Clare Supporter's Club we offer an online community of likeminded supporters to become a part of one club. 
+                            <br>
+                            Clare hurling supporters fundraising to support Clare hurling from development squads to senior, giving fans the opportunity to give back to their county.
+                            <br>
+                            Here at Clare Supporter's Club we offer Clare GAA gear at discounted rates for members of the club, all profits going back to the county. 
+                            <br>
+                            <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 <div class="row row-flex">
     {% for product in products %}
+    <div class="container">
+        <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
@@ -21,6 +49,8 @@
                     </div>
                 </form>
             </div>
+            </div>
+        </div>
         </div>
     {% endfor %}
 </div>

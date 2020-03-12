@@ -1,7 +1,10 @@
+/* CSS for base.html */
+ 
 body {
     font-family: Arial;
     padding-top: 100px;
 }
+
 
 footer {
     margin-top: 40px;
@@ -15,6 +18,35 @@ footer {
 .icon-bar {
     background-color: yellow;
 }
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 2;
+}
+
+
+.logo {
+    line-height: 57px;
+}
+
+
+.navbar {
+  min-height: 80px;
+}
+
+
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 57px;
+}
+
+.container>.navbar-header>.nav {
+    padding-top: 12px;
+}
+
 
 .accountform {
     padding-top: 20px;
@@ -54,7 +86,12 @@ caption p {
 
 .panel-default {
     border-color: transparent;
+    background-color: transparent;
     padding: 0 10px;
+}
+
+.panel {
+    background-color: transparent;
 }
 
 .panel-body {
