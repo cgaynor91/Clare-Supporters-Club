@@ -2,3 +2,5 @@
 __pychache__
 .~c9*
 env.py
+static/
+media/
