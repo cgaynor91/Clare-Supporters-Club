@@ -1,5 +1,7 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+
 {% block page_title %}Merchandise{% endblock %}
+
 {% block content %}
 <section class="page-container">
     <div class="row">
@@ -9,17 +11,19 @@
                     <h1 class="orange-text">Merchandise</h1>
                     <br>
                     <p>
-                        Clare GAA <br> Clare GAA official online store features the Nevis training range, accessories and kids clothing. Personalise the latest Clare GAA jersey with a name, number or player fit only at oneills.com. The Clare GAA Nevis
-                        range features lightweight half zips, stretchable skinnies & fashionable tops. Fast Delivery!
+                        Objective<br>
+                        The primary goal of Clare Supporters Club is to secure funding for the provision of identified facilities, equipment and services for Clare hurling.
+                        <br>
+                        By becoming a member of the club you are enabling yourself to support your county and avail of special Clare Supporter's Discount prices for merchandise and tickets. 
                     </p>
                     <hr>
                     <div class="row">
                         <div id="search" class="offset-1 col-10 offset-md-2 col-md-8 mx-auto">
-                            <form action="{% url '#' %}" method="GET">
+                            <form action="{% url 'products_search' %}" method="GET">
                                 <div class="form-group">
                                     <p>
-                                        <label for="" class="yellow-text">Search</label>
-                                        <input id="products-search" type="text" name="query" class="form-control" placeholder="e.g. Jersey">
+                                        <label for="products-search" class="orange-text">Search</label>
+                                        <input id="products-search" type="text" name="query" class="form-control" placeholder="e.g. T-Shirt">
                                     </p>
                                     <p>
                                         <button class="btn btn-custom sm-btn-sizing ml-1" type="submit">Search</button>
@@ -27,18 +31,18 @@
                                     </p>
                                 </div>
                             </form>
-                        </div> 
-                    </div> 
+                        </div>
+                    </div>
                     <hr>
                     <br>
                     <div class="row">
                         {% for product in products %}
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card mb-3 border-dark" style="background-color: #3498DB;">
+                            <div class="card mb-3 border-dark" style="background-color: #696969;">
                                 <img src="{{ MEDIA_URL }}{{ product.image }}" class="card-img-top" alt="Image of {{ product.name }}" />
                                 <div class="card-body">
                                     <h5 class="product-card-title"><a class="text-links" href="{% url 'product_details' pk=product.pk %}">{{ product.name }}</a></h5>
-                                    <p class="card-text">€{{ product.price }}</p>
+                                    <p class="card-text">£{{ product.price }}</p>
                                     <div class="row">
                                         <div class="col-12">
                                             <form method="POST" action="{% url 'add_to_cart' product.id %}">
@@ -56,12 +60,12 @@
                                 </div>
                             </div>
                         </div>
-{% endfor %}
+                        {% endfor %}
                     </div>
                     <br>
-            <div class="row">
-                <div class="mx-auto">
-                     {% if products.has_other_pages %}
+                    <div class="row">
+                        <div class="mx-auto">
+                            {% if products.has_other_pages %}
                             <ul class="pagination">
                                 {% if products.has_previous %}
                                 <li class="page-item">
