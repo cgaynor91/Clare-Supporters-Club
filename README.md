@@ -5,7 +5,7 @@
 
 [![Build Status](https://travis-ci.org/cgaynor91/Clare-Supporters-Club.svg?branch=master)](https://travis-ci.org/cgaynor91/Clare-Supporters-Club)
 
-Find the deployed project can be found at: https://clare-supporters-club.herokuapp.com/
+The deployed project can be found at: https://clare-supporters-club.herokuapp.com/
 
 ### User Experience (UX)
 #### Project Purpose
@@ -110,6 +110,50 @@ On my wireframe of the products page I did not have a carousel of images as I fe
 #### Payment processing
 - Stripe API
 
+### Testing
+
+Using Travis I set up Continous Integration which automated testing for every app. I acheived this by creating a .travis.yml file and also linking my GitHub repository to my Travis account. Using thr Travis Markdown I was able to see clearly wqhen the code was passing or failing. Everytime new code was pushed to GitHub it was tested through Travis. 
+
+Using ChromDev Tools I tested the app on responsive screens ranging from S5 to IPAD to see if there were formatting issues. I ran into issues with my navbar on the smaller screens as the collapse menu was dropping down too far and floating to the right - I rectified this my adjusting my navbar to masthead. 
+
+Testing was also carried out within the application which can be viewed in the app folders named test.py or test_****.py.
+
+I carried out manual testing on the webiste by going through it as a user
+ - I registered as a user on the website
+ - I added merchandise to my cart
+ - I edited the quantity in the cart
+ - I proceeded to checkout and paid for the items 
+ - I received the alert message to advise me that the transaction had gone through
+ - I checked my stripe account and the payments had gone through successfully
+
+ - I went onto the app as a guest User
+ - I added items to cart
+ - I went to purchase and the website directed me to login page which gave me the option of registration if I did not have log in details.
+ 
+ - I manually tested the search box
+ - All forms work and all display errors should the fields not be filled out correctly
+ - Social links and email links in the nvabar all oparted perfectly when tested
+ 
+ - I also sent the link for my application to family and friends who tested it out for me too with no issues reported back. 
+ 
+
+### Deployment
+
+* I created this project in the AWS Cloud9 IDE. Within the terminal using git I pushed to my <a href="https://github.com/cgaynor91/Clare-Suppoerts-Club">repository</a> on Github. 
+* I created an app on Heroku and deployed from same.
+* In Heroku deployment method was set to Github with automatic deploys set from the master branch.
+* The app was then deployed via this link: "https://git.heroku.com/working-it-out.git".
+
+#### To clone the repository:
+* Select the Repository from Github.
+* Click on the "Clone or download" green button
+* Click on the "clipboard icon" to the right of the Git URL to copy the web URL.
+* Open your IDE and navigate to terminal window
+* Change the directory to where you want to clone the repository to.
+* Paste the Git URL copied from above and click "Ok".
+
+
+ 
 
 
 
