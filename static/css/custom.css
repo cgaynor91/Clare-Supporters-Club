@@ -189,3 +189,20 @@ label{
 .product-description {
     min-height: 40px;
 }
+
+/* Footer and Social Styles */
+
+.footer_links {
+    color: #fff;
+    transition: color .3s ease-in-out;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    padding-top: 0.5rem;
+    text-decoration: none;
+}
+
+.my-gmail {
+    font-size: 1rem;
+}
