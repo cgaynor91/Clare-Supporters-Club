@@ -17,7 +17,7 @@
 
 <body>
     <!-- Fixed masthead -->
-    <nav class="navbar navbar-brand navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-brand navbar-default navbar-fixed-top" style="background-color: #1d5c9a;">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand logo" href="{% url 'index' %}"><img class="logo" src="{% static 'images/logo.png' %}" class='logo' alt="clare hurling icon" height="40" width="40"/></a>
@@ -29,6 +29,7 @@
                 </button>
                 <a class="navbar-brand" href="/">Clare Supporter's Club</a>
             </div>
+
             <!-- put in the collapsible button for the website which displays on small screens only -->
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -74,7 +75,7 @@
         
         {% endblock %}
   </div>
-    <footer>
+    <footer class="fixed-bottom">
         <div class="container">
             <p>&copy; Claire Gaynor</p>
         </div>

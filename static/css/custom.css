@@ -21,6 +21,12 @@ footer {
 h1 {
     display: block;
     font-size: 4.5em;
+    color: #1d5c9a;
+}
+
+p {
+    font-weight: bold;
+    color: #1d5c9a;
 }
 
 .icon-bar {
@@ -56,11 +62,27 @@ input, button, select, textarea {
     padding-top: 12px;
 }
 
+/* CSS for bootstrap forms */
 
+legend {
+    color: #1d5c9a;
+}
 
+.form-group {
+    color: #1d5c9a;
+}
 
 .accountform {
     padding-top: 20px;
+}
+
+.password-reset {
+    display: inline-block;
+}
+
+.btn-login {
+    margin-top: 10px
+    display: block;
 }
 
 .badge {
@@ -75,6 +97,14 @@ input, button, select, textarea {
 .badge-warning[href] {
     background-color: #c67605;
 }
+
+label{
+    display: inline-block;
+    max-width: 100%;
+    font-weight: bold;
+    float: left;
+    padding-top: 5px;
+}
 /* Styling for products */
 
 .product {
@@ -86,14 +116,6 @@ input, button, select, textarea {
     margin: 0 auto;
 }
 
-caption p {
-    word-wrap: break-word;
-}
-
-.main {
-    background: #f4c430;
-    opacity: 0.6;
-}
 
 .row.row-flex {
     display: flex;
