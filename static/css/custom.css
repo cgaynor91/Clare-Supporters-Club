@@ -114,7 +114,9 @@ legend {
 }
 
 .password-reset {
-    display: block;
+    float: left;
+    margin-left: 15px;
+    margin-top: 5px;
 }
 
 .badge {
