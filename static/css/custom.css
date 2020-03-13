@@ -26,10 +26,11 @@ h1 {
     color: #1d5c9a;
 }
 
-.home-page-text {
-    font-weight: bold;
+h3 {
     color: #1d5c9a;
+    font-weight: bolder;
 }
+
 
 .icon-bar {
     background-color: yellow;
@@ -141,6 +142,23 @@ label{
 }
 /* Styling for products */
 
+.big .sub-title .welcome {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+
+
+
+.home-page-text {
+    font-weight: bold;
+    color: #1d5c9a;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-size: 2rem;
+    text-align: center;
+}
+
 .product {
     background-size: contain;
     background-position: center center;
@@ -188,6 +206,10 @@ label{
 
 .product-description {
     min-height: 40px;
+    color: #1d5c9a;
+    font-weight: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 /* Footer and Social Styles */
