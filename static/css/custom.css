@@ -1,11 +1,9 @@
-
-
 /* CSS for base.html */
- 
+
 body {
     font-family: Arial;
     padding-top: 90px;
-    background-image: url("/static/images/bg.JPG"); 
+    background-image: url("/static/images/bg.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,6 +22,8 @@ h1 {
     display: block;
     font-size: 4.5em;
     color: #1d5c9a;
+    margin-top: 50px;
+    margin-left: 100px;
 }
 
 h3 {
@@ -36,11 +36,14 @@ h3 {
     background-color: yellow;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: 2;
-    float:left;
+    float: left;
 }
 
 .search {
@@ -53,15 +56,15 @@ input, button, select, textarea {
 
 
 .navbar {
-  min-height: 80px;
+    min-height: 80px;
 }
 
 
 
 .navbar-brand {
-  padding: 0 15px;
-  height: 80px;
-  line-height: 57px;
+    padding: 0 15px;
+    height: 80px;
+    line-height: 57px;
 }
 
 .container>.navbar-header>.nav {
@@ -71,24 +74,23 @@ input, button, select, textarea {
 
 /*--Carousel--*/
 
-
 .item {
-  height: 50vh;
-  min-height: 180px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    height: 50vh;
+    min-height: 180px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .carousel-caption {
-  font-size: 18px;
-  color: #fff!important;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  width: 50%;
-  margin: auto;
+    font-size: 18px;
+    color: #fff!important;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
 }
 
 .home-text {
@@ -133,21 +135,26 @@ legend {
     background-color: #c67605;
 }
 
-label{
+.alert-success {
+    background-color: #1995dc;;
+    border-color: #1995dc;;
+    color: #ffff00;
+}
+
+label {
     display: inline-block;
     max-width: 100%;
     font-weight: bold;
     float: left;
     padding-top: 5px;
 }
+
 /* Styling for products */
 
-.big .sub-title .welcome {
+.sub-title {
     margin-top: 50px;
     margin-left: 100px;
 }
-
-
 
 
 .home-page-text {
