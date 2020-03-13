@@ -41,6 +41,8 @@ As is tradition for me, my wireframes don't look exactly like my finished projec
 
 On my wireframe of the products page I did not have a carousel of images as I felt that it may clutter up the site too much, however as the site progressed I felt the product page was lacking in something of impact and photo's of the team the user supports was a nice way to break up the page. 
 
+My wireframes can be found in the wireframes folder.
+
 
 ### Features
 #### Current Features
@@ -69,7 +71,7 @@ On my wireframe of the products page I did not have a carousel of images as I fe
     - At checkout the user will have to fill out a form with their shipping details and also their credit card information. 
     - The checkout feature is only available for users who have signed up for Clare Supporters Club
     - Once the user has paid a message will be displayed to advise them of same. 
-- Feature 13 - Log Out
+- Feature 8 - Log Out
     - When a user decides they want to log out of the site, the option to do so is located on the navbar once the user is logged in.
     - Once the user chooses to log out, they will be taken back to the home page as a guest, with the default nav options available for a guest user (Home, Reviews, Register, Log In, Merchandise, Cart).
 #### Future Features
@@ -113,11 +115,14 @@ On my wireframe of the products page I did not have a carousel of images as I fe
 ### Testing
 
 Using Travis I set up Continous Integration which automated testing for every app. I acheived this by creating a .travis.yml file and also linking my GitHub repository to my Travis account. Using thr Travis Markdown I was able to see clearly wqhen the code was passing or failing. Everytime new code was pushed to GitHub it was tested through Travis. 
+#
 
 Using ChromDev Tools I tested the app on responsive screens ranging from S5 to IPAD to see if there were formatting issues. I ran into issues with my navbar on the smaller screens as the collapse menu was dropping down too far and floating to the right - I rectified this my adjusting my navbar to masthead. 
+#
 
 Testing was also carried out within the application which can be viewed in the app folders named test.py or test_****.py.
 
+#
 I carried out manual testing on the webiste by going through it as a user
  - I registered as a user on the website
  - I added merchandise to my cart
@@ -125,11 +130,11 @@ I carried out manual testing on the webiste by going through it as a user
  - I proceeded to checkout and paid for the items 
  - I received the alert message to advise me that the transaction had gone through
  - I checked my stripe account and the payments had gone through successfully
-
+#
  - I went onto the app as a guest User
  - I added items to cart
  - I went to purchase and the website directed me to login page which gave me the option of registration if I did not have log in details.
- 
+#
  - I manually tested the search box
  - All forms work and all display errors should the fields not be filled out correctly
  - Social links and email links in the nvabar all oparted perfectly when tested
@@ -151,6 +156,15 @@ I carried out manual testing on the webiste by going through it as a user
 * Open your IDE and navigate to terminal window
 * Change the directory to where you want to clone the repository to.
 * Paste the Git URL copied from above and click "Ok".
+
+## Credits
+
+ - Credit has to go to Code Institute and all their staff for helping me along the way. For this particular project I found the Full Stack Module was the module I referred to most for tutorials and guidance.
+ - Carousel was taken from Bootstrap 
+ - Inspiration and logo was taken from <a href="http://clubclare.com/">Club Clare</a>
+
+## Acknowledgements 
+I would just like to thank everyone from Code Institute for everything over the past year. It has not been easy but having such a great support system and a great peer group has made what seem to be irreversible problems solvable. Special thanks to my mentor Simen and all the team at Student Care. 
 
 
  
