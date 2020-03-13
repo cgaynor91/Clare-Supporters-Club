@@ -1,23 +1,22 @@
 {% extends 'base.html' %} {% load static from staticfiles %} {% block content %}
 
-<div class="container main">
+<div class="container main-text">
     <div class="col-12 text-center">
         <div class="col-12 offset-md-1 col-md-10">
             <h1 class="big">Clare Supporter's Club</h1>
             <h3>A club for like-minded individuals who support The Banner County</h3>
             <br> {% if user.is_authenticated %}
-            <h3>Welcome back <span>{{ request.user.username }}</span>!</h3>
+            <h3 class="home-text">Welcome back <span>{{ request.user.username }}</span>!</h3>
             {% else %}
             <h3>Welcome!</h3>
             {% endif %}
-            <strong><p>
+            <strong><p class="home-page-text">
                     Here at Clare Supporter's Club we offer an online community of likeminded supporters to become a part of one club.
                     <br> Clare hurling supporters fundraising to support Clare hurling from development squads to senior, giving fans the opportunity to give back to their county.
                     <br> Here at Clare Supporter's Club we offer Clare GAA gear at discounted rates for members of the club, all profits going back to the county.</strong></p>
-            <br>
         </div>
     </div>
-    </div>
+</div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
