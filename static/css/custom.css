@@ -76,12 +76,12 @@ legend {
     padding-top: 20px;
 }
 
-.password-reset {
-    display: inline-block;
+.btn-login {
+    margin-top: 10px;
+    display: block;
 }
 
-.btn-login {
-    margin-top: 10px
+.password-reset {
     display: block;
 }
 
@@ -116,7 +116,6 @@ label{
     margin: 0 auto;
 }
 
-
 .row.row-flex {
     display: flex;
     flex-wrap: wrap;
@@ -137,6 +136,14 @@ label{
     height: 100%;
     border: 1px solid #ddd;
 }
+
+
+/* Checkout html */
+
+.total {
+    margin-left: 10px;
+}
+
 
 .product-description {
     min-height: 40px;
