@@ -1,27 +1,71 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static from staticfiles %} {% block content %}
 
 <div class="container main">
     <div class="col-12 text-center">
-            <div class="col-12 offset-md-1 col-md-10">
-                <h1 class="big">Clare Supporter's Club</h1>
-                <h3>A club for likeminded individuals who support The Banner County</h3>
-                <br> {% if user.is_authenticated %}
-                <h3>Welcome back <span>{{ request.user.username }}</span>!</h3>
-                {% else %}
-                <h3>Welcome!</h3>
-                {% endif %}
-                <strong><p>
+        <div class="col-12 offset-md-1 col-md-10">
+            <h1 class="big">Clare Supporter's Club</h1>
+            <h3>A club for like-minded individuals who support The Banner County</h3>
+            <br> {% if user.is_authenticated %}
+            <h3>Welcome back <span>{{ request.user.username }}</span>!</h3>
+            {% else %}
+            <h3>Welcome!</h3>
+            {% endif %}
+            <strong><p>
                     Here at Clare Supporter's Club we offer an online community of likeminded supporters to become a part of one club.
                     <br> Clare hurling supporters fundraising to support Clare hurling from development squads to senior, giving fans the opportunity to give back to their county.
                     <br> Here at Clare Supporter's Club we offer Clare GAA gear at discounted rates for members of the club, all profits going back to the county.</strong></p>
-                    <br>
-                    <br>
+            <br>
+        </div>
+    </div>
+    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{% static "images/clareteam.JPG" %}" alt="The Clare Team">
+                <div class="carousel-caption">
+                    <h3>The Clare Team</h3>
+                    <p>Cusack Park Ennis</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{% static "images/peter.JPG" %}" alt="Peter Duggan">
+                <div class="carousel-caption">
+                    <h3>Peter Duggan</h3>
+                    <p>Cusack Park Ennis</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{% static "images/aidan.JPG" %}" alt="Aidan McCarthy">
+                <div class="carousel-caption">
+                    <h3>Aidan McCarthy</h3>
+                    <p>Fraher Field Waterford</p>
+                </div>
             </div>
         </div>
 
-</div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+    </div>
+
+
+
 <div class="row row-flex">
     {% for product in products %}
     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
