@@ -192,17 +192,22 @@ label{
 
 /* Footer and Social Styles */
 
-.footer_links {
+.page-footer {
+    border-color: #fff;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.footer-links a {
     color: #fff;
     transition: color .3s ease-in-out;
-    transition-property: color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
     padding-top: 0.5rem;
     text-decoration: none;
+    font-size: 1.8rem;
 }
 
 .my-gmail {
-    font-size: 1rem;
+    font-size: 1.8rem;
 }
