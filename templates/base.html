@@ -17,7 +17,7 @@
 
 <body>
     <!-- Fixed masthead -->
-    <nav class="navbar navbar-brand navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand logo" href="{% url 'index' %}"><img class="logo" src="{% static 'images/logo.png' %}" class='logo' alt="clare hurling icon" height="40" width="40"/></a>
@@ -31,7 +31,7 @@
             </div>
 
             <!-- put in the collapsible button for the website which displays on small screens only -->
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse in">
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i>Profile</a></li>

@@ -59,9 +59,11 @@ textarea {
     min-height: 80px;
 }
 
+.navbar a {
+    font-size: 1.8rem;
+}
 
-
-.navbar-brand {
+.navbar-masthead {
     padding: 0 15px;
     height: 80px;
     line-height: 57px;
